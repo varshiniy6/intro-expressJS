@@ -6,3 +6,8 @@ app.get("/", (request, response) => {
   console.log(response);
 });
 app.listen(3000);
+
+app.get("/date", (request, response) => {
+  let date = new Date();
+  response.send(`Today Date is ${date}`);
+});
